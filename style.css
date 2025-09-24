@@ -100,14 +100,24 @@ article {
   font-size: 18px;
   cursor: pointer;
 }
-
+.new {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  background: white;
+  border: 1px solid black;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
 .udsolgt {
   position: absolute;
-  bottom: 150px;
+  bottom: 145px;
   right: 10px;
   background: white;
   padding: 10px;
-  margin-left: 100px;
+  margin-left: 5px;
   font-size: 15px;
   cursor: pointer;
 }
