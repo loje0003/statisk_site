@@ -18,7 +18,10 @@ h1 {
   margin-bottom: 3rem;
   font-family: "Montserrat", sans-serif;
 }
-
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+}
 h3,
 h4,
 p {
@@ -29,6 +32,28 @@ p {
 a {
   font-family: "Montserrat", sans-serif;
   color: #4e3d42;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 10px;
+  list-style: none;
+}
+.menu a {
+  text-decoration: none;
+}
+
+.menu li:hover {
+  border-bottom: 1px solid;
 }
 
 .category_list_container {
@@ -100,7 +125,7 @@ article {
 }
 
 .rating {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .beskrivelse {
