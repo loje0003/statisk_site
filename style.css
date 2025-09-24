@@ -61,6 +61,19 @@ article {
   grid-template-rows: subgrid;
   grid-row: span 5;
   gap: 10px;
+  position: relative;
+}
+
+.favorite {
+  position: absolute;
+  top: 1%;
+  left: 84%;
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin-left: 5px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .grid_1-1 {
