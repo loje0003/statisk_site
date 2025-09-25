@@ -191,12 +191,12 @@ article {
   right: 16px;
   top: 50%;
 }
-.grid_1-1 {
+#productcontainer {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 @media (min-width: 750px) {
-  .grid_1-1 {
+  #productcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
