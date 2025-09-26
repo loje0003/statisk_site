@@ -101,7 +101,7 @@ article {
   font-size: 18px;
   cursor: pointer;
 }
-.new {
+.onSale {
   position: absolute;
   top: 60px;
   right: 10px;
@@ -114,7 +114,7 @@ article {
 }
 .udsolgt {
   position: absolute;
-  bottom: 145px;
+  bottom: 170px;
   right: 10px;
   background: white;
   padding: 10px;
