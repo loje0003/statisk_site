@@ -1,9 +1,11 @@
 console.log("product loadet");
 
-const id = 1581;
-// const id = new URLSearchParams(window.location.search).get("id");
-const productUrl = "https://kea-alt-del.dk/t7/api/products/" + id;
-const pruductcontainer = document.querySelector("#productcontainer");
+// const id = 1581;
+const id = new URLSearchParams(window.location.search).get("id");
+const productUrl = `https://kea-alt-del.dk/t7/api/products/${id}`;
+
+// const productUrl = "https://kea-alt-del.dk/t7/api/products/" + id;
+// const pruductcontainer = document.querySelector("#productcontainer");
 
 console.log("product", productUrl);
 
