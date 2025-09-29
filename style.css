@@ -57,8 +57,10 @@ a {
 }
 
 .category_list_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
   gap: 20px;
   margin-top: 1rem;
 }
