@@ -17,28 +17,21 @@ function showProducts(products) {
     }
 
     productContainer.innerHTML += ` 
-<article>
-  <div class="billede">
-    <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}">
-  </div>
+<article class="product_list_container ${product.soldout === 1 ? "soldout" : ""}">
+
+   <div class="imageContainer">
+         <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}">
+      <p class="soldout">Ikke på lager</p>
+      </div>
+ 
+
   <button class="favorite">&#9825;</button>
 
-  ${
-    product.soldout === 1
-      ? `
-    <div class="udsolgt">
-      <p>Ikke på lager</p>
-      <a href="produktliste.html">Se lignende produkter</a>
-    </div>
-  `
-      : ""
-  }
+
 
   <p class="onSale">${product.discount}%</p>
   <h3>${product.productdisplayname}</h3>
-  <div class="rating">
-    &starf;&starf;&starf;&starf;&star;<span>(42)</span>
-  </div>
+
   <h4>${product.price} kr.</h4>
   <a href="produkt.html">read more</a>
 </article>
