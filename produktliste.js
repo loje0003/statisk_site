@@ -30,7 +30,11 @@ function showProducts(products) {
         </div>
         
         <button class="favorite">&#9825;</button>
-        <p class="onSale">${product.discount}%</p>
+
+        <p class="${product.discount > 0 ? "onSale" : ""}">
+        ${product.discount > 0 ? product.discount + "%" : ""}
+        </p>
+
         <h3>${product.productdisplayname}</h3>
         <h4>${product.price} kr.</h4>
         <a href="produkt.html?id=${product.id}">read more</a>

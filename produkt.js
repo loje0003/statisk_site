@@ -25,9 +25,6 @@ function show(data) {
     <h2>${data.productdisplayname}</h2>
     <h3>${data.brandname}</h3>
     <p class="beskrivelse">${data.description}</p>
-      <div class="rating">
-    &starf;&starf;&star;&star;&star;<span>(23)</span>
-     </div>
     <h4 class="pris">${data.price} kr.</h4>
     <button class="str knapper">one size</button>
     <button class="add-to-cart knapper">Læg i indkøbskurv</button>
