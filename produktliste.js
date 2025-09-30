@@ -31,9 +31,9 @@ function showProducts(products) {
         
         <button class="favorite">&#9825;</button>
 
-        <p class="${product.discount > 0 ? "onSale" : ""}">
-        ${product.discount > 0 ? product.discount + "%" : ""}
-        </p>
+     <p class="${product.discount > 0 ? "onSale" : "hidden"}">
+  ${product.discount > 0 ? product.discount + "%" : ""}
+</p>
 
         <h3>${product.productdisplayname}</h3>
         <h4>${product.price} kr.</h4>

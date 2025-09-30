@@ -87,7 +87,7 @@ a {
 article {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 5;
+  grid-row: span 4;
   gap: 10px;
   position: relative;
 }
@@ -102,6 +102,9 @@ article {
   padding: 10px;
   margin-left: 5px;
   font-size: 18px;
+}
+.hidden {
+  display: none;
 }
 
 .onSale {
