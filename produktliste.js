@@ -31,14 +31,22 @@ function showProducts(products) {
         
         <button class="favorite">&#9825;</button>
 
-     <p class="${product.discount > 0 ? "onSale" : "hidden"}">
-  ${product.discount > 0 ? product.discount + "%" : ""}
-</p>
+        <p class="${product.discount > 0 ? "onSale" : "hidden"}">
+        -${product.discount}%
+        </p>
 
-        <h3>${product.productdisplayname}</h3>
-        <h4>${product.price} kr.</h4>
-        <a href="produkt.html?id=${product.id}">read more</a>
+          <h3>${product.productdisplayname}</h3>
+          
+
+        <h4> ${product.discount > 0 ? `<span style="text-decoration: line-through;">${product.price} kr.</span>` : product.price + " kr."}
+        </h4>
+        ${product.discount > 0 ? `<h4 style="color: #bb1a1aff;">Ny pris: ${(product.price * (1 - product.discount / 100)).toFixed(2)} kr.</h4>` : ""}
+
+         <a href="produkt.html?id=${product.id}">read more</a>
       </article>
+
+
+     
     `;
   });
 }
