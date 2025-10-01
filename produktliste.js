@@ -21,32 +21,29 @@ function showProducts(products) {
     console.log("productdisplayname", product.productdisplayname);
 
     productContainer.innerHTML += `
-      <article class="product_list_container ${product.soldout === 1 ? "soldout" : ""}">
-        <div class="imageContainer">
-          <a href="produkt.html?id=${product.id}">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}">
-          </a>
-          <p class="soldout">Ikke på lager</p>
-        </div>
-        
+  <article class="product ${product.soldout === 1 ? "soldout" : ""}">
+    <div class="imageContainer">
+      <a href="produkt.html?id=${product.id}">
+        <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}">
+      </a>
+      <p class="soldout-label">Ikke på lager</p>
+
+      <div class="top-right">
         <button class="favorite">&#9825;</button>
-
         <p class="${product.discount > 0 ? "onSale" : "hidden"}">
-        -${product.discount}%
+          -${product.discount}%
         </p>
+      </div>
+    </div>
 
-          <h3>${product.productdisplayname}</h3>
-          
+    <h3>${product.productdisplayname}</h3>
+    <h4>
+      ${product.discount > 0 ? `<span style="text-decoration: line-through;">${product.price} kr.</span>` : product.price + " kr."}
+    </h4>
+    ${product.discount > 0 ? `<h4 style="color: #bb1a1aff;">Ny pris: ${(product.price * (1 - product.discount / 100)).toFixed(2)} kr.</h4>` : ""}
 
-        <h4> ${product.discount > 0 ? `<span style="text-decoration: line-through;">${product.price} kr.</span>` : product.price + " kr."}
-        </h4>
-        ${product.discount > 0 ? `<h4 style="color: #bb1a1aff;">Ny pris: ${(product.price * (1 - product.discount / 100)).toFixed(2)} kr.</h4>` : ""}
-
-         <a href="produkt.html?id=${product.id}">read more</a>
-      </article>
-
-
-     
-    `;
+    <a href="produkt.html?id=${product.id}">read more</a>
+  </article>
+`;
   });
 }
