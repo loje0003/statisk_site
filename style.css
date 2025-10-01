@@ -27,7 +27,7 @@ h4,
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  line-height: 15px;
+  line-height: 20px;
 }
 a {
   font-family: "Montserrat", sans-serif;
@@ -91,11 +91,19 @@ article {
   position: relative;
   display: grid;
   gap: 20px;
+  background-color: #f1f1f1;
+}
+
+.tekst_produktliste h3,
+.tekst_produktliste h4,
+.tekst_produktliste a.read_more {
+  margin: 1rem;
 }
 
 .imageContainer {
   position: relative;
   display: grid;
+  margin: 1rem;
 }
 
 .imageContainer img {
@@ -113,10 +121,10 @@ article {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8rem;
+  width: 6.5rem;
   background: white;
-  padding: 10px;
-  font-size: 15px;
+  padding: 8px;
+  font-size: 13px;
   border: 1px solid black;
   display: inline-block;
 }
@@ -137,8 +145,8 @@ article {
   right: 1rem;
   background: white;
   border: 1px solid black;
-  padding: 10px;
-  font-size: 18px;
+  padding: 8px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -153,10 +161,7 @@ article {
   display: none;
 }
 
-.beskrivelse {
-  margin-top: 1rem;
-}
-
+.beskrivelse,
 .pris {
   margin-top: 1rem;
 }
