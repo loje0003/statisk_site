@@ -7,15 +7,34 @@ getData(url);
 
 const productContainer = document.querySelector(".product_list_container");
 
+let allData = [];
 function getData(url) {
+  console.log("Henter data...");
   fetch(url)
     .then((res) => res.json())
-    .then((data) => showProducts(data));
+    .then((data) => {
+      allData = data;
+      showProducts(data);
+    });
 }
+
+getData(url);
+
+document.querySelectorAll(".buttons button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const filter = btn.dataset.season;
+    if (filter === "All") {
+      showProducts(allData);
+    } else {
+      const filtered = allData.filter((p) => p.season === filter);
+      showProducts(filtered);
+    }
+  });
+});
 
 function showProducts(products) {
   console.log("products", products);
-  productContainer.innerHTML = ""; // Tøm containeren først
+  productContainer.innerHTML = "";
 
   products.forEach((product) => {
     console.log("productdisplayname", product.productdisplayname);
@@ -37,6 +56,7 @@ function showProducts(products) {
     </div>
 <div class="tekst_produktliste">
     <h3>${product.productdisplayname}</h3>
+
     <h4>
       ${product.discount > 0 ? `<span style="text-decoration: line-through;">${product.price} kr.</span>` : product.price + " kr."}
     </h4>

@@ -4,8 +4,7 @@ console.log("product loadet");
 const id = new URLSearchParams(window.location.search).get("id");
 const productUrl = `https://kea-alt-del.dk/t7/api/products/${id}`;
 
-// const productUrl = "https://kea-alt-del.dk/t7/api/products/" + id;
-// const pruductcontainer = document.querySelector("#productcontainer");
+const productcontainer = document.querySelector("#productcontainer");
 
 console.log("product", productUrl);
 
@@ -16,6 +15,8 @@ function getData() {
 
 function show(data) {
   console.log("shows data er", data);
+
+  const descriptionArr = data.description ? data.description.split("\n") : [];
 
   productcontainer.innerHTML = `
   <div class="billede">
